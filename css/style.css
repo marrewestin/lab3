@@ -10,3 +10,60 @@ body {
     color: #333;
     line-height: 1.6;
 }
+
+.header-wrapper {
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #ccc;
+}
+
+.logo h1 {
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-family: 'ADLaM Display', sans-serif;
+}
+
+.logo img {
+    max-width: 40px;
+    padding: 5px;
+}
+
+header a {
+    display: block;
+    padding: 5px 50px;
+    border: 1px solid #ccc;
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header a:hover {
+    color: #fff;
+    background-color: #94A677;
+    border: 1px solid #94A677;
+    font-weight: bold;
+}
+
+/* Header styles desktop 
+ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+ul a {
+    display: block;
+    text-decoration: none;
+    padding: 10px 15px;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+ul a:hover {
+    color: #fff;
+    background-color: #333;
+}*/
