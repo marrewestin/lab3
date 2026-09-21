@@ -4,15 +4,48 @@
     box-sizing: border-box;
 }
 
+/* Font styles for Abhaya Libre 
+.abhaya-libre-regular {
+  font-family: "Abhaya Libre", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.abhaya-libre-medium {
+  font-family: "Abhaya Libre", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.abhaya-libre-semibold {
+  font-family: "Abhaya Libre", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.abhaya-libre-bold {
+  font-family: "Abhaya Libre", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.abhaya-libre-extrabold {
+  font-family: "Abhaya Libre", serif;
+  font-weight: 800;
+  font-style: normal;
+}
+*/
+
 body {
     font-family: Abhaya Libre, serif;
     background-color: #f4f4f4;
     color: #333;
-    line-height: 1.6;
+    line-height: 1.4;
 }
 
-.header-wrapper {
-}
+/*Sidhuvud*/
+
+.header-wrapper {}
 
 .logo {
     display: flex;
@@ -32,6 +65,8 @@ body {
     padding: 5px;
 }
 
+/*Meny*/
+
 header a {
     display: block;
     padding: 5px 50px;
@@ -46,6 +81,135 @@ header a:hover {
     background-color: #94A677;
     border: 1px solid #94A677;
     font-weight: bold;
+}
+
+/*Bilder, rubriker, paragrafer*/
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+h2 {
+    text-align: center;
+    font-weight: 800;
+    padding-top: 15px;
+}
+
+p {
+    text-align: center;
+    padding: 0 20px;
+}
+
+/*Sektioner*/
+
+.hero {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nature {
+    padding-bottom: 20px;
+}
+
+.plan {
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.exp {
+    background-color: #E5EFD5;
+    padding-bottom: 10px;
+}
+
+.cards {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    margin: 20px;
+}
+
+.cards h3{
+    font-weight: 800;
+    padding: 15px 20px 0;
+}
+
+.cards p {
+    text-align: left;
+    padding: 0 20px 15px;
+}
+
+/*Knappar*/
+
+.btn {
+    font-family: 'ADLaM Display', sans-serif;
+    padding: 8px 15px;
+    margin-top: 20px;
+    background-color: #94A677;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn:hover {
+    background-color: #E5EFD5;
+    color: #333;
+}
+
+/*Sidfot*/
+
+footer {
+    background-color: #E5EFD5;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9em;
+    display: flex;
+    flex-direction: column;
+}
+
+.first-footer img {
+    max-width: 60px;
+    padding: 5px;
+}
+
+.first-footer h3 {
+    font-size: 1em;
+    text-transform: uppercase;
+    font-family: 'ADLaM Display', sans-serif;
+}
+
+.second-footer h4 {
+    font-size: 0.9em;
+    font-weight: 1000;
+    font-family: 'ADLaM Display', sans-serif;
+    margin: 10px 0 5px 20px;
+    text-align: left;
+}
+
+.second-footer p {
+    font-weight: 700;
+    font-size: 1em;
+    text-align: left;
+}
+
+.links a {
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.links a:hover {
+    color: #94A677;
+}
+
+.second-footer {
+    display: flex;
+    padding-bottom: 20px;
 }
 
 /* Header styles desktop 
