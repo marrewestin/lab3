@@ -83,6 +83,39 @@ header a:hover {
     font-weight: bold;
 }
 
+/*Meny för stor skärm*/
+
+@media (min-width: 700px) {
+    .header-wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .logo {
+        border: none;
+    }
+
+    ul {
+        list-style-type: none;
+        display: flex;
+    }
+
+    header a {
+        /*display: inline-block;
+        text-decoration: none;*/
+        border: none;
+        padding: 10px 15px;
+        color: #333;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    header a:hover {
+        color: #fff;
+        background-color: #94A677;
+        border: none;
+    }
+}
+
 /*Bilder, rubriker, paragrafer*/
 
 img {
@@ -100,6 +133,7 @@ p {
     text-align: center;
     padding: 0 20px;
 }
+
 
 /*Sektioner*/
 
@@ -133,7 +167,7 @@ p {
     margin: 20px;
 }
 
-.cards h3{
+.cards h3 {
     font-weight: 800;
     padding: 15px 20px 0;
 }
