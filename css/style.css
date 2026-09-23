@@ -55,13 +55,13 @@ body {
 }
 
 .logo h1 {
-    font-size: 1.5em;
+    font-size: 1em;
     text-transform: uppercase;
     font-family: 'ADLaM Display', sans-serif;
 }
 
 .logo img {
-    max-width: 40px;
+    max-width: 50px;
     padding: 5px;
 }
 
@@ -69,26 +69,28 @@ body {
 
 header a {
     display: block;
-    padding: 5px 50px;
+    padding: 8px 50px;
     border: 1px solid #ccc;
     text-decoration: none;
+    font-weight: 600;
     color: #333;
     transition: background-color 0.3s, color 0.3s;
 }
 
-header a:hover {
+header a:hover, header a:focus   {
     color: #fff;
     background-color: #94A677;
     border: 1px solid #94A677;
     font-weight: bold;
+    outline: none;
 }
 
 /*Meny för stor skärm*/
 
-@media (min-width: 700px) {
+@media (min-width: 750px) {
     .header-wrapper {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
     }
 
     .logo {
@@ -101,15 +103,13 @@ header a:hover {
     }
 
     header a {
-        /*display: inline-block;
-        text-decoration: none;*/
         border: none;
-        padding: 10px 15px;
+        padding: 15px 15px;
         color: #333;
         transition: background-color 0.3s, color 0.3s;
     }
 
-    header a:hover {
+    header a:hover, header a:focus {
         color: #fff;
         background-color: #94A677;
         border: none;
@@ -126,45 +126,82 @@ img {
 h2 {
     text-align: center;
     font-weight: 800;
-    padding-top: 15px;
+    padding: 15px 0;
 }
 
 p {
     text-align: center;
     padding: 0 20px;
+    margin-bottom: 10px;
 }
 
 
-/*Sektioner*/
+/*Sektion 1: Hero*/
 
 .hero {
     border-bottom: 1px solid #ccc;
     padding-bottom: 20px;
+    position: relative;
+}
+
+#hero-text {
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
+/*Sektion 1: Hero - för stor skärm*/
+
+@media (min-width:750px) {
+    .hero img {
+        max-height: 400px;
+        object-fit: cover;
+    }
+
+    .hero {
+        padding: 0;
+        border: none;
+    }
+    
+    #hero-text {
+        position: absolute;
+        top: 20%;
+        left: 5%;
+        color: #fff;
+        align-items: flex-start;
+        max-width: 17rem;
+    }
+
+    #hero-text h2 {
+        text-align: left;
+        max-width: 10rem;
+    }
+
+    #hero-text p {
+        padding: 0;
+        text-align: left;
+    }
+}
+
+/*Sektion 2: Naturen*/
 .nature {
     padding-bottom: 20px;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-.plan {
-    padding-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+/*Sektion 3: Upplev*/
 
 .exp {
     background-color: #E5EFD5;
-    padding-bottom: 10px;
+    padding: 20px;
 }
 
 .cards {
     background-color: #fff;
     border: 1px solid #ccc;
-    margin: 20px;
 }
 
 .cards h3 {
@@ -177,22 +214,83 @@ p {
     padding: 0 20px 15px;
 }
 
+/*Sektion 3: Upplev - för stor skärm*/
+
+@media (min-width:750px) {
+    #card-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .cards {
+        max-width: 300px;
+        flex: 1;
+    }
+}
+
+/*Sektion 4: Planera*/
+
+.plan {
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 980px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+/*Sektion 4: Planera - för stor skärm*/
+
+@media (min-width: 750px) {
+    .plan {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 20px;
+    }
+
+    .plan p {
+        text-align: left;
+        padding: 0;
+    }
+
+    .plan h2 {
+        text-align: left;
+    }
+
+    #plan-text {
+        max-width: 500px;
+        flex: 2;
+    }
+
+    #plan-btn {
+        flex: 1;
+        text-align: right;
+    }
+
+    .btn {
+        
+    }
+}
+
 /*Knappar*/
 
 .btn {
     font-family: 'ADLaM Display', sans-serif;
     padding: 8px 15px;
-    margin-top: 20px;
+    margin-top: 10px;
     background-color: #94A677;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s, color 0.3s;;
 }
 
-.btn:hover {
+.btn:hover, .btn:focus {
     background-color: #E5EFD5;
     color: #333;
+    /*outline: none;*/
 }
 
 /*Sidfot*/
@@ -208,6 +306,7 @@ footer {
 
 .first-footer img {
     max-width: 60px;
+    max-height: 60px;
     padding: 5px;
 }
 
@@ -229,6 +328,7 @@ footer {
     font-weight: 700;
     font-size: 1em;
     text-align: left;
+    margin: 0;
 }
 
 .links a {
@@ -237,13 +337,39 @@ footer {
     transition: background-color 0.3s, color 0.3s;
 }
 
-.links a:hover {
+.links a:hover, .links a:focus {
     color: #94A677;
 }
 
 .second-footer {
     display: flex;
     padding-bottom: 20px;
+    justify-content: space-evenly;
+}
+
+/*Sidfot - för stor skärm*/
+
+@media (min-width: 700px) {
+    footer {
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+        padding-top: 30px;
+    }
+
+    .first-footer {
+        display: flex;
+    }
+
+    footer h3 {
+        padding-top: 15px;
+        margin-left: 20px;
+        text-align: left;
+    }
+
+    footer p {
+        text-align: left;
+    }
 }
 
 /* Header styles desktop 
